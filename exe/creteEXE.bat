@@ -1,0 +1,1 @@
+pyinstaller -F k1.py -i k1.ico
