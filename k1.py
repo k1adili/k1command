@@ -17,7 +17,7 @@ import platform
 
 text = """
     ╔═══════════════════════════════════════════╗
-    ║          K1 Command version 1.3           ║
+    ║          K1 Command version 1.4           ║
     ║you can type help and see available command║
     ║           programmer K1.Adili             ║
     ║        email: k1adili@gmail.com           ║
