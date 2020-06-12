@@ -14,6 +14,7 @@ import winsound
 import platform
 
 
+
 text = """
     ╔═══════════════════════════════════════════╗
     ║          K1 Command version 1.3           ║
@@ -39,6 +40,16 @@ Purple	35			Purple	45
 Cyan	36			Cyan	46
 White	37			White	47
 """
+
+def random_Password():
+    import random
+    import string
+    s1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+-~[]{}<>"
+    password = "".join(random.sample(s1, 16))
+    print(password)
+
+
+
 def temp():
     url = 'https://weather.com/weather/today/l/35.76,51.33?par=google&temp=c'
     r = requests.get(url)
@@ -178,6 +189,7 @@ def run():
         ║eu          Show Euro price vs Toman.     ║
         ║os          Show system information.      ║
         ║temp        Show Tehran temperature.      ║
+        ║rp          Generate random password.     ║
         ║..........................................║
         ╚══════════════════════════════════════════╝
         """
@@ -255,6 +267,8 @@ def run():
         # print('Tehran temperature: ', tem, 'ͨ')
         maxmin = tempMaxMin()
         print(f"\033[1;32;40m Tehran Max/Min temperature: {maxmin}ͨ")
+    elif a.lower() == 'rp':
+        random_Password()
 
     elif a.lower() == 'test':
         puts(colored.yellow(a))
