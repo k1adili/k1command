@@ -46,7 +46,7 @@ def random_Password():
     import string
     s1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+-~[]{}<>"
     password = "".join(random.sample(s1, 16))
-    print(password)
+    print("\033[1;32;40m  {}".format(password))
 
 
 
@@ -96,7 +96,7 @@ def euro():
 
 def hash_def():
     file_path = easygui.fileopenbox()
-    print("\033[1;36;40m file path:    {}".format(file_path))
+    print("\033[1;32;40m file path:    {}".format(file_path))
     BLOCK_SIZE = 65536  # The size of each read from the file
     file_hash = hashlib.sha256()  # Create the hash object, can use something other than `.sha256()` if you wish
     with open(file_path, 'rb') as f:  # Open the file to read it's bytes
@@ -197,49 +197,49 @@ def run():
         # puts(colored.yellow(helpText))
     elif a.lower() == 'time':
         # puts(colored.cyan(str(jdatetime.datetime.now())))
-        print("\033[1;36;40m {}".format(str(jdatetime.datetime.now())))
+        print("\033[1;32;40m {}".format(str(jdatetime.datetime.now())))
     elif a.lower() == 'folder':
         persianDate = jdatetime.datetime.now().strftime('%Y-%m-%d_%H%M%S')
         path = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop\\' + persianDate)
         os.makedirs(path)
         text = 'folder created in desktop and name is {}'.format(persianDate)
-        print("\033[1;36;40m {}".format(text))
+        print("\033[1;32;40m {}".format(text))
 
     elif a.lower() == 'internet':
         if connect():
-            print("\033[1;36;40m {}".format('Internet is conected'))
+            print("\033[1;32;40m {}".format('Internet is conected'))
         else:
             print("\033[1;31;40m {}".format('Internet is disconected'))
     elif a.lower() == 'isp':
         print('\033[1;35;40m please wait...', end="\r")
         ispStr = isp()
-        print("\033[1;36;40m {}".format(ispStr))
+        print("\033[1;32;40m {}".format(ispStr))
 
     elif a.lower() == 'ip':
-        print("\033[1;36;40m local ip:  {}".format(str(socket.gethostbyname(socket.gethostname()))))
+        print("\033[1;32;40m local ip:  {}".format(str(socket.gethostbyname(socket.gethostname()))))
         print('\033[1;35;40m please wait...', end="\r")
         wanip = getip()
-        print("\033[1;36;40m wan ip:    {}".format(wanip))
+        print("\033[1;32;40m wan ip:    {}".format(wanip))
     elif a.lower() == 'guid':
-        print("\033[1;36;40m  {}".format(str(uuid.uuid4())))
+        print("\033[1;32;40m  {}".format(str(uuid.uuid4())))
 
     elif a.lower() == 'proxykill':
         os.system('cmd /C "reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 0 /f"')
-        print("\033[1;36;40m Proxy server disable")
+        print("\033[1;32;40m Proxy server disable")
 
     elif a.lower() == 'filehash':
         HASH = hash_def()
-        print("\033[1;36;40m File hash:    {}".format(HASH))
+        print("\033[1;32;40m File hash:    {}".format(HASH))
 
     elif a.lower() == 'os':
-        print(f"\033[1;36;40m Os: {platform.system()}")
-        print(f"\033[1;36;40m Version: {platform.platform()}")
-        print(f"\033[1;36;40m PC Name: {platform.node()}")
-        print(f"\033[1;36;40m Processor: {platform.processor()}")
+        print(f"\033[1;32;40m Os: {platform.system()}")
+        print(f"\033[1;32;40m Version: {platform.platform()}")
+        print(f"\033[1;32;40m PC Name: {platform.node()}")
+        print(f"\033[1;32;40m Processor: {platform.processor()}")
 
     elif a.lower() == 'fdns':
         os.system('cmd /C "ipconfig /flushdns"')
-        print("\033[1;36;40m flushed the DNS")
+        print("\033[1;32;40m flushed the DNS")
     elif a.lower() == 'ping':
         os.system('cmd /C "ping google.com"')
 
@@ -251,11 +251,11 @@ def run():
     elif a.lower() == '$':
         print('\033[1;35;40m please wait...', end="\r")
         a = dollar()
-        print(f"\033[1;36;40m $: {a} Toman")
+        print(f"\033[1;32;40m $: {a} Toman")
     elif a.lower() == 'eu':
         print('\033[1;35;40m please wait...', end="\r")
         eu = euro()
-        print(f"\033[1;36;40m €: {eu} Toman")
+        print(f"\033[1;32;40m €: {eu} Toman")
 
     elif a.lower() == 'speedtest':
         speed_test()
