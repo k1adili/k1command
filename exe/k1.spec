@@ -1,10 +1,10 @@
-# -*- mode: python -*-
+# -*- mode: python ; coding: utf-8 -*-
 
 block_cipher = None
 
 
 a = Analysis(['k1.py'],
-             pathex=['D:\\Python\\Code\\k1_command\\exe'],
+             pathex=['C:\\Users\\k.adili\\Desktop\\k1command\\k1command\\exe'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -28,5 +28,6 @@ exe = EXE(pyz,
           bootloader_ignore_signals=False,
           strip=False,
           upx=True,
+          upx_exclude=[],
           runtime_tmpdir=None,
           console=True , icon='k1.ico')
