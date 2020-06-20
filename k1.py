@@ -21,7 +21,7 @@ def cowsay(say):
 
 text = """
     ╔═══════════════════════════════════════════╗
-    ║          K1 Command version 1.4           ║
+    ║          K1 Command version 1.5           ║
     ║you can type help and see available command║
     ║           programmer K1.Adili             ║
     ║        email: k1adili@gmail.com           ║
@@ -207,6 +207,7 @@ def run():
         ║os          Show system information.      ║
         ║temp        Show Tehran temperature.      ║
         ║rp          Generate random password.     ║
+        ║cowsay      Create cowsay text.           ║
         ║..........................................║
         ╚══════════════════════════════════════════╝
         """
