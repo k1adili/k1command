@@ -13,6 +13,10 @@ import easygui
 import winsound
 import platform
 
+def cowsay(say):
+    import cowsay
+    # cowsay.stegosaurus(say)
+    cowsay.cow(say)
 
 
 text = """
@@ -25,9 +29,21 @@ text = """
     
     Type 'help' and see available command
     """
-# puts(colored.green(text))
 
-print("\033[1;37;40m {}".format(text))
+# print("\033[1;37;40m {}".format(text))
+
+text2 = """
+    
+              K1 Command version 1.5           
+    you can type help and see available command
+               programmer K1.Adili             
+            email: k1adili@gmail.com           
+    
+
+    Type 'help' and see available command
+    """
+
+cowsay(text2)
 
 """
 TEXT COLOR	CODE	TEXT STYLE	CODE	BACKGROUND COLOR	CODE
@@ -40,6 +56,7 @@ Purple	35			Purple	45
 Cyan	36			Cyan	46
 White	37			White	47
 """
+
 
 def random_Password():
     import random
@@ -269,6 +286,10 @@ def run():
         print(f"\033[1;32;40m Tehran Max/Min temperature: {maxmin}ͨ")
     elif a.lower() == 'rp':
         random_Password()
+
+    elif a.lower() == 'cowsay':
+        cowtext = input('enter your text: ')
+        cowsay(cowtext)
 
     elif a.lower() == 'test':
         puts(colored.yellow(a))
