@@ -1,0 +1,12 @@
+jdatetime
+clint.textui
+requests
+urllib.request
+bs4
+speedtest-cli
+socket
+uuid
+hashlib
+easygui
+winsound
+platform
